@@ -1,0 +1,10 @@
+{
+  "frontend/src/App.tsx": "Main application component that manages the customer support interface state, displaying either the Customer Care button or the contact form with success message handling.",
+  "frontend/src/components/Header.tsx": "Compact header component displaying the 24x7 Care logo and tagline with minimal spacing.",
+  "frontend/src/components/Footer.tsx": "Footer component with attribution link to caffeine.ai and a heart icon.",
+  "frontend/src/components/ContactForm.tsx": "Contact form component with name, email, and message fields, including validation and submission to the backend with loading states.",
+  "frontend/src/components/SuccessMessage.tsx": "Success alert component that displays a confirmation message after successful form submission with a dismissible close button.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching contact form data from the backend.",
+  "frontend/src/index.css": "Global styles with OKLCH color system including custom royal blue theme colors for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with royal blue color tokens for the customer care theme."
+}
