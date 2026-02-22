@@ -1,2 +1,3 @@
-# 24x7-care-customer-support-interface
-Exported from Caffeine project: 24x7 Care Customer Support Interface
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

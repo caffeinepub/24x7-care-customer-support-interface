@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "LG-branded home appliances repair service center page",
+  "architectural_notes": [],
+  "known_issues": [
+    "Current LG logo implementation does not match official LG branding"
+  ],
+  "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Official LG Electronics logo with red circle and white 'LG' text on transparent background, optimized for web header display (lg-logo.dim_180x60.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-new-service-center-landing-page-with-sections-for-different-home-appliance-categories-refrigerators-washing-machines-air-conditioners-microwaves-dishwashers-tvs",
+      "title": "Create a new service center landing page with sections for different home appliance categories (refrigerators, washing machines, air conditioners, microwaves, dishwashers, TVs)",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-service-request-section-where-users-can-select-their-appliance-type-describe-the-issue-and-submit-a-service-request",
+      "title": "Add a service request section where users can select their appliance type, describe the issue, and submit a service request",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-service-center-features-section-highlighting-24-7-support-certified-technicians-genuine-parts-and-warranty-service",
+      "title": "Display service center features section highlighting 24/7 support, certified technicians, genuine parts, and warranty service",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-faq-section-with-common-service-related-questions-and-expandable-answers",
+      "title": "Add a FAQ section with common service-related questions and expandable answers",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-a-contact-information-section-with-phone-number-email-and-service-center-locations",
+      "title": "Include a contact information section with phone number, email, and service center locations",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-professional-corporate-design-theme-inspired-by-lg-service-centers-with-clean-typography-organized-sections-and-a-trustworthy-visual-style-using-blues-whites-and-grays",
+      "title": "Apply a professional, corporate design theme inspired by LG service centers with clean typography, organized sections, and a trustworthy visual style using blues, whites, and grays",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-24x7-care-logo-and-branding-in-the-header-component-with-the-lg-logo-maintaining-the-existing-header-layout-and-structure",
+      "title": "Replace the current \"24x7 Care\" logo and branding in the Header component with the LG logo, maintaining the existing header layout and structure",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-header-tagline-from-always-here-for-you-to-an-lg-appliance-repair-services-appropriate-tagline-such-as-life-s-good-or-expert-appliance-care",
+      "title": "Update the header tagline from \"Always here for you\" to an LG Appliance repair services appropriate tagline such as \"Life's Good\" or \"Expert Appliance Care\"",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-color-scheme-from-the-current-corporate-blue-to-lg-s-signature-red-a50034-as-the-primary-brand-color-maintaining-professional-appearance-and-readability",
+      "title": "Update the color scheme from the current corporate blue to LG's signature red (#A50034) as the primary brand color, maintaining professional appearance and readability",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-typography-to-use-lg-s-brand-typeface-or-a-close-web-safe-alternative-such-as-lg-smart-lg-display-alternative-with-clean-modern-sans-serif-styling",
+      "title": "Update typography to use LG's brand typeface or a close web-safe alternative (such as LG Smart/LG Display alternative) with clean, modern sans-serif styling",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-branding-and-copyright-text-to-reference-lg-electronics-and-lg-service-center-instead-of-the-current-branding",
+      "title": "Update the footer branding and copyright text to reference LG Electronics and LG Service Center instead of the current branding",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-svg-based-lg-logo-in-the-header-component-with-the-official-lg-electronics-logo-image-asset-maintaining-the-existing-header-layout-and-structure",
+      "title": "Replace the current SVG-based LG logo in the Header component with the official LG Electronics logo image asset, maintaining the existing header layout and structure",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-comprehensive-lg-brand-theme-across-all-page-sections-including-hero-section-appliance-category-cards-service-features-service-request-form-faq-accordion-and-contact-information-sections",
+      "title": "Apply comprehensive LG brand theme across all page sections including hero section, appliance category cards, service features, service request form, FAQ accordion, and contact information sections",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-background-colors-border-treatments-and-card-designs-across-servicecenterpage-to-align-with-lg-brand-identity-using-subtle-grays-and-whites-with-lg-red-accents",
+      "title": "Update background colors, border treatments, and card designs across ServiceCenterPage to align with LG brand identity using subtle grays and whites with LG red accents",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-all-icons-badges-and-graphical-elements-throughout-the-page-complement-the-lg-brand-aesthetic-with-appropriate-sizing-spacing-and-color-treatments",
+      "title": "Ensure all icons, badges, and graphical elements throughout the page complement the LG brand aesthetic with appropriate sizing, spacing, and color treatments",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Service center page for home appliances with LG-style layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Extend backend to store service requests with appliance type, model number, issue description, customer contact details, and submission timestamp",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Replace branding with LG logo and styling to match LG Appliance repair services",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Replace with proper official LG logo and apply complete LG-branded theme across entire page",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Appliance Service Center",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

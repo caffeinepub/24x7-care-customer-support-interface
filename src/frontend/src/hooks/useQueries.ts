@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useActor } from './useActor';
-import type { ContactForm } from '../backend';
+import type { ContactForm, ServiceRequest } from '../backend';
 
 export function useGetAllContacts() {
   const { actor, isFetching } = useActor();
@@ -29,5 +29,18 @@ export function useGetContactByEmail(email: string) {
       }
     },
     enabled: !!actor && !isFetching && !!email,
+  });
+}
+
+export function useGetAllServiceRequests() {
+  const { actor, isFetching } = useActor();
+
+  return useQuery<ServiceRequest[]>({
+    queryKey: ['serviceRequests'],
+    queryFn: async () => {
+      if (!actor) return [];
+      return actor.getAllServiceRequests();
+    },
+    enabled: !!actor && !isFetching,
   });
 }

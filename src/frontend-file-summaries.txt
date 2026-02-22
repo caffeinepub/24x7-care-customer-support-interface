@@ -1,10 +1,17 @@
 {
-  "frontend/src/App.tsx": "Main application component that manages the customer support interface state, displaying either the Customer Care button or the contact form with success message handling.",
-  "frontend/src/components/Header.tsx": "Compact header component displaying the 24x7 Care logo and tagline with minimal spacing.",
-  "frontend/src/components/Footer.tsx": "Footer component with attribution link to caffeine.ai and a heart icon.",
-  "frontend/src/components/ContactForm.tsx": "Contact form component with name, email, and message fields, including validation and submission to the backend with loading states.",
-  "frontend/src/components/SuccessMessage.tsx": "Success alert component that displays a confirmation message after successful form submission with a dismissible close button.",
-  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching contact form data from the backend.",
-  "frontend/src/index.css": "Global styles with OKLCH color system including custom royal blue theme colors for both light and dark modes.",
-  "frontend/tailwind.config.js": "Tailwind configuration extended with royal blue color tokens for the customer care theme."
+  "frontend/src/App.tsx": "Main application component that renders the ServiceCenterPage wrapped with Header and Footer components.",
+  "frontend/src/components/Header.tsx": "Header component displaying the official LG Electronics logo image from assets with the wrench icon and \"Life's Good\" tagline, maintaining the existing layout structure.",
+  "frontend/src/components/Footer.tsx": "Footer component with LG Electronics and LG Service Center copyright text, maintaining the caffeine.ai attribution with UTM tracking and using the primary color for the heart icon.",
+  "frontend/src/components/ContactForm.tsx": "Contact form component with LG red button colors, form focus states using primary color, and validation styling consistent with LG brand.",
+  "frontend/src/components/SuccessMessage.tsx": "Success alert component displaying confirmation message with LG red check icon and color theme aligned with LG brand identity.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching contacts and service requests from the backend, including getAllServiceRequests query.",
+  "frontend/src/index.css": "Global styles with OKLCH color system featuring LG Heritage Red (#A50034) as the primary brand color with clean white backgrounds and subtle gray tones for both light and dark modes, following LG brand guidelines.",
+  "frontend/tailwind.config.js": "Tailwind configuration with color tokens mapped to the LG red primary color scheme and custom shadow utilities for LG brand aesthetic.",
+  "frontend/src/pages/ServiceCenterPage.tsx": "Complete service center landing page with LG-branded hero section using primary red gradient, appliance categories, service features, request form, FAQ, and contact information sections with consistent LG theme.",
+  "frontend/src/components/ApplianceCategoryGrid.tsx": "Responsive grid component displaying six appliance categories with icons, using LG red accent on hover states and clean card designs with subtle shadows.",
+  "frontend/src/components/ServiceFeatures.tsx": "Grid layout showcasing four key service benefits with LG red icon accents, clean card backgrounds, and professional spacing aligned with LG brand patterns.",
+  "frontend/src/components/ServiceRequestForm.tsx": "Comprehensive service request form with LG red primary button colors, focus states using LG red ring, and clean input designs with professional styling.",
+  "frontend/src/components/FAQ.tsx": "Accordion-based FAQ section with LG red hover states on accordion triggers and clean backgrounds following LG design patterns.",
+  "frontend/src/components/ContactInfo.tsx": "Contact information display with LG red icon accents, clean card backgrounds, subtle shadows, and consistent styling complementing the LG brand aesthetic.",
+  "frontend/src/hooks/useServiceRequestMutation.ts": "React Query mutation hook for submitting service requests to the backend with proper error handling and cache invalidation."
 }

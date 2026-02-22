@@ -4,26 +4,30 @@
 
 @layer base {
     :root {
-        --radius: 0.625rem;
-        --background: 0.98 0 0;
+        --radius: 0.5rem;
+        /* Clean white backgrounds for LG brand */
+        --background: 1 0 0;
         --foreground: 0.145 0 0;
         --card: 1 0 0;
         --card-foreground: 0.145 0 0;
         --popover: 1 0 0;
         --popover-foreground: 0.145 0 0;
-        --primary: 0.205 0 0;
+        /* LG Heritage Red as primary color - #A50034 converted to OKLCH */
+        --primary: 0.445 0.195 13.5;
         --primary-foreground: 0.985 0 0;
-        --secondary: 0.97 0 0;
+        /* Subtle gray for secondary elements */
+        --secondary: 0.96 0 0;
         --secondary-foreground: 0.205 0 0;
-        --muted: 0.96 0 0;
-        --muted-foreground: 0.556 0 0;
+        --muted: 0.965 0 0;
+        --muted-foreground: 0.50 0 0;
         --accent: 0.97 0 0;
         --accent-foreground: 0.205 0 0;
         --destructive: 0.577 0.245 27.325;
         --destructive-foreground: 0.985 0 0;
-        --border: 0.90 0 0;
-        --input: 0.92 0 0;
-        --ring: 0.708 0 0;
+        /* Clean borders */
+        --border: 0.93 0 0;
+        --input: 0.95 0 0;
+        --ring: 0.445 0.195 13.5;
         --chart-1: 0.646 0.222 41.116;
         --chart-2: 0.6 0.118 184.704;
         --chart-3: 0.398 0.07 227.392;
@@ -31,17 +35,12 @@
         --chart-5: 0.769 0.188 70.08;
         --sidebar: 0.985 0 0;
         --sidebar-foreground: 0.145 0 0;
-        --sidebar-primary: 0.205 0 0;
+        --sidebar-primary: 0.445 0.195 13.5;
         --sidebar-primary-foreground: 0.985 0 0;
         --sidebar-accent: 0.97 0 0;
         --sidebar-accent-foreground: 0.205 0 0;
         --sidebar-border: 0.922 0 0;
-        --sidebar-ring: 0.708 0 0;
-        
-        /* Royal Blue Theme Colors */
-        --royal-blue: 0.45 0.18 264;
-        --royal-blue-dark: 0.38 0.20 264;
-        --royal-blue-light: 0.55 0.15 264;
+        --sidebar-ring: 0.445 0.195 13.5;
     }
 
     .dark {
@@ -51,8 +50,9 @@
         --card-foreground: 0.985 0 0;
         --popover: 0.269 0 0;
         --popover-foreground: 0.985 0 0;
-        --primary: 0.922 0 0;
-        --primary-foreground: 0.205 0 0;
+        /* LG Heritage Red for dark mode - slightly lighter for visibility */
+        --primary: 0.55 0.20 13.5;
+        --primary-foreground: 0.985 0 0;
         --secondary: 0.269 0 0;
         --secondary-foreground: 0.985 0 0;
         --muted: 0.269 0 0;
@@ -63,7 +63,7 @@
         --destructive-foreground: 0.205 0 0;
         --border: 1 0 0 / 10%;
         --input: 1 0 0 / 15%;
-        --ring: 0.556 0 0;
+        --ring: 0.55 0.20 13.5;
         --chart-1: 0.488 0.243 264.376;
         --chart-2: 0.696 0.17 162.48;
         --chart-3: 0.769 0.188 70.08;
@@ -71,17 +71,12 @@
         --chart-5: 0.645 0.246 16.439;
         --sidebar: 0.205 0 0;
         --sidebar-foreground: 0.985 0 0;
-        --sidebar-primary: 0.488 0.243 264.376;
+        --sidebar-primary: 0.55 0.20 13.5;
         --sidebar-primary-foreground: 0.985 0 0;
         --sidebar-accent: 0.269 0 0;
         --sidebar-accent-foreground: 0.985 0 0;
         --sidebar-border: 1 0 0 / 10%;
         --sidebar-ring: 0.439 0 0;
-        
-        /* Royal Blue Theme Colors - Dark Mode */
-        --royal-blue: 0.55 0.16 264;
-        --royal-blue-dark: 0.48 0.18 264;
-        --royal-blue-light: 0.62 0.14 264;
     }
 
     * {
@@ -89,5 +84,8 @@
     }
     body {
         @apply bg-background text-foreground;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }

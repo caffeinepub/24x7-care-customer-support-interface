@@ -65,11 +65,6 @@ export default {
                     'accent-foreground': 'oklch(var(--sidebar-accent-foreground))',
                     border: 'oklch(var(--sidebar-border))',
                     ring: 'oklch(var(--sidebar-ring))'
-                },
-                'royal-blue': {
-                    DEFAULT: 'oklch(var(--royal-blue))',
-                    dark: 'oklch(var(--royal-blue-dark))',
-                    light: 'oklch(var(--royal-blue-light))'
                 }
             },
             borderRadius: {
@@ -78,7 +73,8 @@ export default {
                 sm: 'calc(var(--radius) - 4px)'
             },
             boxShadow: {
-                xs: '0 1px 2px 0 rgba(0,0,0,0.05)'
+                xs: '0 1px 2px 0 rgba(0,0,0,0.05)',
+                'lg-card': '0 4px 6px -1px rgba(165, 0, 52, 0.1), 0 2px 4px -1px rgba(165, 0, 52, 0.06)'
             },
             keyframes: {
                 'accordion-down': {

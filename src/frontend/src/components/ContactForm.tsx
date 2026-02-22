@@ -66,7 +66,7 @@ export function ContactForm({ onSuccess, onCancel }: ContactFormProps) {
   };
 
   return (
-    <Card className="shadow-xl border-2">
+    <Card className="shadow-xl border-2 border-border">
       <CardHeader className="pb-4">
         <div className="flex items-start justify-between">
           <div>
@@ -95,7 +95,7 @@ export function ContactForm({ onSuccess, onCancel }: ContactFormProps) {
               placeholder="Your full name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className={errors.name ? 'border-destructive' : ''}
+              className={errors.name ? 'border-destructive focus:ring-destructive' : 'focus:ring-primary'}
             />
             {errors.name && (
               <p className="text-sm text-destructive">{errors.name}</p>
@@ -110,7 +110,7 @@ export function ContactForm({ onSuccess, onCancel }: ContactFormProps) {
               placeholder="your.email@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={errors.email ? 'border-destructive' : ''}
+              className={errors.email ? 'border-destructive focus:ring-destructive' : 'focus:ring-primary'}
             />
             {errors.email && (
               <p className="text-sm text-destructive">{errors.email}</p>
@@ -124,7 +124,7 @@ export function ContactForm({ onSuccess, onCancel }: ContactFormProps) {
               placeholder="How can we help you?"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className={`min-h-[120px] resize-none ${errors.message ? 'border-destructive' : ''}`}
+              className={`min-h-[120px] resize-none ${errors.message ? 'border-destructive focus:ring-destructive' : 'focus:ring-primary'}`}
             />
             {errors.message && (
               <p className="text-sm text-destructive">{errors.message}</p>
@@ -135,7 +135,7 @@ export function ContactForm({ onSuccess, onCancel }: ContactFormProps) {
             <Button
               type="submit"
               disabled={submitMutation.isPending}
-              className="flex-1 bg-royal-blue hover:bg-royal-blue-dark text-white"
+              className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               {submitMutation.isPending ? (
                 <>

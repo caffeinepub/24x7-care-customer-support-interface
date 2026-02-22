@@ -16,11 +16,24 @@ export interface ContactForm {
   'message' : string,
   'timestamp' : Time,
 }
+export interface ServiceRequest {
+  'customerName' : string,
+  'issueDescription' : string,
+  'modelNumber' : string,
+  'timestamp' : Time,
+  'applianceType' : string,
+  'customerEmail' : string,
+}
 export type Time = bigint;
 export interface _SERVICE {
   'getAllContacts' : ActorMethod<[], Array<ContactForm>>,
+  'getAllServiceRequests' : ActorMethod<[], Array<ServiceRequest>>,
   'getContactByEmail' : ActorMethod<[string], ContactForm>,
   'submitContactForm' : ActorMethod<[string, string, string], undefined>,
+  'submitServiceRequest' : ActorMethod<
+    [string, string, string, string, string],
+    undefined
+  >,
 }
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];

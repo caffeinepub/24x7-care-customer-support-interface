@@ -15,11 +15,25 @@ export const ContactForm = IDL.Record({
   'message' : IDL.Text,
   'timestamp' : Time,
 });
+export const ServiceRequest = IDL.Record({
+  'customerName' : IDL.Text,
+  'issueDescription' : IDL.Text,
+  'modelNumber' : IDL.Text,
+  'timestamp' : Time,
+  'applianceType' : IDL.Text,
+  'customerEmail' : IDL.Text,
+});
 
 export const idlService = IDL.Service({
   'getAllContacts' : IDL.Func([], [IDL.Vec(ContactForm)], ['query']),
+  'getAllServiceRequests' : IDL.Func([], [IDL.Vec(ServiceRequest)], ['query']),
   'getContactByEmail' : IDL.Func([IDL.Text], [ContactForm], ['query']),
   'submitContactForm' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [], []),
+  'submitServiceRequest' : IDL.Func(
+      [IDL.Text, IDL.Text, IDL.Text, IDL.Text, IDL.Text],
+      [],
+      [],
+    ),
 });
 
 export const idlInitArgs = [];
@@ -32,11 +46,29 @@ export const idlFactory = ({ IDL }) => {
     'message' : IDL.Text,
     'timestamp' : Time,
   });
+  const ServiceRequest = IDL.Record({
+    'customerName' : IDL.Text,
+    'issueDescription' : IDL.Text,
+    'modelNumber' : IDL.Text,
+    'timestamp' : Time,
+    'applianceType' : IDL.Text,
+    'customerEmail' : IDL.Text,
+  });
   
   return IDL.Service({
     'getAllContacts' : IDL.Func([], [IDL.Vec(ContactForm)], ['query']),
+    'getAllServiceRequests' : IDL.Func(
+        [],
+        [IDL.Vec(ServiceRequest)],
+        ['query'],
+      ),
     'getContactByEmail' : IDL.Func([IDL.Text], [ContactForm], ['query']),
     'submitContactForm' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [], []),
+    'submitServiceRequest' : IDL.Func(
+        [IDL.Text, IDL.Text, IDL.Text, IDL.Text, IDL.Text],
+        [],
+        [],
+      ),
   });
 };
 

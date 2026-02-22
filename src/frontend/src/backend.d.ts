@@ -7,15 +7,25 @@ export interface None {
     __kind__: "None";
 }
 export type Option<T> = Some<T> | None;
+export interface ServiceRequest {
+    customerName: string;
+    issueDescription: string;
+    modelNumber: string;
+    timestamp: Time;
+    applianceType: string;
+    customerEmail: string;
+}
+export type Time = bigint;
 export interface ContactForm {
     name: string;
     email: string;
     message: string;
     timestamp: Time;
 }
-export type Time = bigint;
 export interface backendInterface {
     getAllContacts(): Promise<Array<ContactForm>>;
+    getAllServiceRequests(): Promise<Array<ServiceRequest>>;
     getContactByEmail(email: string): Promise<ContactForm>;
     submitContactForm(name: string, email: string, message: string): Promise<void>;
+    submitServiceRequest(applianceType: string, modelNumber: string, issueDescription: string, customerName: string, customerEmail: string): Promise<void>;
 }

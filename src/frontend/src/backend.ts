@@ -89,17 +89,27 @@ export class ExternalBlob {
         return this;
     }
 }
+export interface ServiceRequest {
+    customerName: string;
+    issueDescription: string;
+    modelNumber: string;
+    timestamp: Time;
+    applianceType: string;
+    customerEmail: string;
+}
+export type Time = bigint;
 export interface ContactForm {
     name: string;
     email: string;
     message: string;
     timestamp: Time;
 }
-export type Time = bigint;
 export interface backendInterface {
     getAllContacts(): Promise<Array<ContactForm>>;
+    getAllServiceRequests(): Promise<Array<ServiceRequest>>;
     getContactByEmail(email: string): Promise<ContactForm>;
     submitContactForm(name: string, email: string, message: string): Promise<void>;
+    submitServiceRequest(applianceType: string, modelNumber: string, issueDescription: string, customerName: string, customerEmail: string): Promise<void>;
 }
 export class Backend implements backendInterface {
     constructor(private actor: ActorSubclass<_SERVICE>, private _uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, private _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, private processError?: (error: unknown) => never){}
@@ -114,6 +124,20 @@ export class Backend implements backendInterface {
             }
         } else {
             const result = await this.actor.getAllContacts();
+            return result;
+        }
+    }
+    async getAllServiceRequests(): Promise<Array<ServiceRequest>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.getAllServiceRequests();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.getAllServiceRequests();
             return result;
         }
     }
@@ -142,6 +166,20 @@ export class Backend implements backendInterface {
             }
         } else {
             const result = await this.actor.submitContactForm(arg0, arg1, arg2);
+            return result;
+        }
+    }
+    async submitServiceRequest(arg0: string, arg1: string, arg2: string, arg3: string, arg4: string): Promise<void> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.submitServiceRequest(arg0, arg1, arg2, arg3, arg4);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.submitServiceRequest(arg0, arg1, arg2, arg3, arg4);
             return result;
         }
     }
