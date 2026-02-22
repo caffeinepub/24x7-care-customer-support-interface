@@ -1,101 +1,41 @@
 {
   "kind": "build_request",
-  "title": "Replace with official LG logo and apply comprehensive LG brand theme",
-  "projectName": "LG Service Center",
-  "priority": "high",
+  "title": "Replace header logo with official LG Electronics logo image",
+  "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-13",
-      "text": "Replace the current SVG-based LG logo in the Header component with the official LG Electronics logo image asset, maintaining the existing header layout and structure",
+      "id": "REQ-17",
+      "text": "Replace the Header component logo with the official LG Electronics logo image asset (showing the circular red LG symbol with gray 'LG' text), maintaining the existing header layout and structure",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-request"
+          "msg-latest"
         ],
         "quotes": [
-          "This is not proper lg logo please add proper logo"
+          "This is the lg logo"
         ]
       },
       "acceptanceCriteria": [
-        "Official LG logo image is displayed in the header",
-        "Logo maintains proper aspect ratio and visual quality",
-        "Header layout structure remains unchanged"
-      ]
-    },
-    {
-      "id": "REQ-14",
-      "text": "Apply comprehensive LG brand theme across all page sections including hero section, appliance category cards, service features, service request form, FAQ accordion, and contact information sections",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-request"
-        ],
-        "quotes": [
-          "full page theme"
-        ]
-      },
-      "acceptanceCriteria": [
-        "All sections use consistent LG Heritage Red (#A50034) accent color",
-        "Typography follows LG brand guidelines with clean, modern sans-serif styling",
-        "Component styling (cards, buttons, forms, accordions) reflects LG brand aesthetics",
-        "Color scheme uses LG red for primary actions and accents while maintaining readability",
-        "Visual hierarchy and spacing follow professional LG design patterns"
-      ]
-    },
-    {
-      "id": "REQ-15",
-      "text": "Update background colors, border treatments, and card designs across ServiceCenterPage to align with LG brand identity using subtle grays and whites with LG red accents",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-request"
-        ],
-        "quotes": [
-          "full page theme"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Page background uses clean white or light gray tones",
-        "Card components have subtle shadows and borders consistent with LG design",
-        "Section dividers and spacing create professional, organized layout",
-        "Interactive elements (buttons, form inputs, accordions) use LG red for hover and active states"
-      ]
-    },
-    {
-      "id": "REQ-16",
-      "text": "Ensure all icons, badges, and graphical elements throughout the page complement the LG brand aesthetic with appropriate sizing, spacing, and color treatments",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-request"
-        ],
-        "quotes": [
-          "full page theme"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Appliance category icons are styled consistently with LG brand",
-        "Service feature icons use appropriate colors and sizing",
-        "Form icons and validation indicators follow LG brand patterns",
-        "All iconography maintains visual consistency across sections"
+        "The Header component displays the official LG Electronics logo image (circular red symbol with 'LG' text) instead of the current SVG implementation",
+        "Logo maintains appropriate size and spacing within the header layout",
+        "Logo is properly aligned with the wrench icon and tagline",
+        "Image asset is optimized for web display with appropriate dimensions"
       ]
     }
   ],
   "constraints": [
-    "Maintain existing header layout structure from Header component",
-    "Preserve all functional components including service request form, contact form, FAQ accordion, and appliance category grid",
-    "Do not modify backend/main.mo or any backend logic",
-    "Do not edit immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui"
+    "Do not modify the Header component layout structure",
+    "Maintain the existing tagline and wrench icon placement",
+    "Preserve the LG Heritage Red (#A50034) color scheme"
   ],
   "nonGoals": [
-    "Changing the functional behavior of forms or data submission",
-    "Modifying backend data models or API endpoints",
-    "Adding new features or functionality beyond visual branding",
-    "Changing the overall page structure or component hierarchy"
+    "Changing other branding elements beyond the header logo",
+    "Modifying the backend functionality",
+    "Altering the overall page theme or styling"
   ],
   "imageRequirements": {
     "required": [
-      "Official LG Electronics logo with red circle and white 'LG' text on transparent background, optimized for web header display (lg-logo.dim_180x60.png)"
+      "Official LG Electronics logo with circular red symbol and gray 'LG' text on transparent or white background (lg-logo.dim_400x150.png)"
     ],
     "edits": []
   }

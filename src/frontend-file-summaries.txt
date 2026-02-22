@@ -1,6 +1,6 @@
 {
   "frontend/src/App.tsx": "Main application component that renders the ServiceCenterPage wrapped with Header and Footer components.",
-  "frontend/src/components/Header.tsx": "Header component displaying the official LG Electronics logo image from assets with the wrench icon and \"Life's Good\" tagline, maintaining the existing layout structure.",
+  "frontend/src/components/Header.tsx": "Header component displaying the official LG Electronics logo image (higher resolution 400x150 version) from assets with the wrench icon and \"Life's Good\" tagline, maintaining the existing layout structure.",
   "frontend/src/components/Footer.tsx": "Footer component with LG Electronics and LG Service Center copyright text, maintaining the caffeine.ai attribution with UTM tracking and using the primary color for the heart icon.",
   "frontend/src/components/ContactForm.tsx": "Contact form component with LG red button colors, form focus states using primary color, and validation styling consistent with LG brand.",
   "frontend/src/components/SuccessMessage.tsx": "Success alert component displaying confirmation message with LG red check icon and color theme aligned with LG brand identity.",

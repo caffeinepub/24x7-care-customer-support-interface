@@ -1,153 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace with official LG logo and apply comprehensive LG brand theme",
+  "title": "Replace header logo with official LG Electronics logo image",
   "requirements": [
     {
-      "id": "REQ-13",
-      "summary": "Replace the current SVG-based LG logo in the Header component with the official LG Electronics logo image asset",
+      "id": "REQ-17",
+      "summary": "Replace the Header component logo with the official LG Electronics logo image asset",
       "acceptanceCriteria": [
-        "Official LG logo image is displayed in the header",
-        "Logo maintains proper aspect ratio and visual quality",
-        "Header layout structure remains unchanged"
+        "The Header component displays the official LG Electronics logo image (circular red symbol with 'LG' text) instead of the current SVG implementation",
+        "Logo maintains appropriate size and spacing within the header layout",
+        "Logo is properly aligned with the wrench icon and tagline",
+        "Image asset is optimized for web display with appropriate dimensions"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Header.tsx",
           "operation": "modify",
-          "description": "Replace the SVG-based LG logo with the official LG Electronics logo image asset from frontend/public/assets/generated/lg-logo.dim_180x60.png, maintaining the existing header layout structure with the logo, wrench icon, and tagline."
-        }
-      ]
-    },
-    {
-      "id": "REQ-14",
-      "summary": "Apply comprehensive LG brand theme across all page sections including hero, categories, features, forms, FAQ, and contact sections",
-      "acceptanceCriteria": [
-        "All sections use consistent LG Heritage Red (#A50034) accent color",
-        "Typography follows LG brand guidelines with clean, modern sans-serif styling",
-        "Component styling (cards, buttons, forms, accordions) reflects LG brand aesthetics",
-        "Color scheme uses LG red for primary actions and accents while maintaining readability",
-        "Visual hierarchy and spacing follow professional LG design patterns"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Update the CSS custom properties to ensure LG Heritage Red (#A50034) is properly defined as the primary color using OKLCH color space, and adjust typography to follow LG brand guidelines with clean, modern sans-serif styling for both light and dark modes."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Update the Tailwind configuration to ensure primary color tokens reference LG Heritage Red and adjust any additional color variables to support the LG brand aesthetic across all component states (hover, active, focus)."
-        },
-        {
-          "path": "frontend/src/pages/ServiceCenterPage.tsx",
-          "operation": "modify",
-          "description": "Apply LG brand theme to the hero section, section headings, and overall page layout using LG red accents, clean backgrounds, and professional spacing that follows LG design patterns."
-        },
-        {
-          "path": "frontend/src/components/ApplianceCategoryGrid.tsx",
-          "operation": "modify",
-          "description": "Update appliance category cards to use LG brand styling with LG red accents on hover states, clean card designs with subtle shadows, and consistent iconography sizing that complements the LG brand aesthetic."
-        },
-        {
-          "path": "frontend/src/components/ServiceFeatures.tsx",
-          "operation": "modify",
-          "description": "Apply LG brand theme to service feature cards with LG red icon accents, clean card backgrounds, subtle borders, and professional spacing that aligns with LG design patterns."
-        },
-        {
-          "path": "frontend/src/components/ServiceRequestForm.tsx",
-          "operation": "modify",
-          "description": "Update the service request form styling to use LG red for buttons, form focus states, and validation indicators, ensuring inputs have clean borders and professional styling consistent with LG brand."
-        },
-        {
-          "path": "frontend/src/components/ContactForm.tsx",
-          "operation": "modify",
-          "description": "Apply LG brand theme to the contact form with LG red button colors, form focus states, and validation styling, maintaining clean input designs with subtle borders."
-        },
-        {
-          "path": "frontend/src/components/FAQ.tsx",
-          "operation": "modify",
-          "description": "Update FAQ accordion styling to use LG red for active/hover states on accordion triggers, clean backgrounds for accordion content, and professional spacing that follows LG design patterns."
-        },
-        {
-          "path": "frontend/src/components/ContactInfo.tsx",
-          "operation": "modify",
-          "description": "Apply LG brand theme to contact information cards with LG red icon accents, clean card backgrounds, subtle shadows, and consistent styling that complements the overall LG brand aesthetic."
-        }
-      ]
-    },
-    {
-      "id": "REQ-15",
-      "summary": "Update background colors, border treatments, and card designs across ServiceCenterPage to align with LG brand identity",
-      "acceptanceCriteria": [
-        "Page background uses clean white or light gray tones",
-        "Card components have subtle shadows and borders consistent with LG design",
-        "Section dividers and spacing create professional, organized layout",
-        "Interactive elements (buttons, form inputs, accordions) use LG red for hover and active states"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/ServiceCenterPage.tsx",
-          "operation": "modify",
-          "description": "Update page-level background colors to use clean white or light gray tones, adjust section dividers for professional spacing, and ensure section containers use LG brand-appropriate backgrounds and spacing."
-        },
-        {
-          "path": "frontend/src/components/ApplianceCategoryGrid.tsx",
-          "operation": "modify",
-          "description": "Refine card backgrounds to use subtle grays or whites, update border treatments to be clean and professional, add subtle shadows consistent with LG design, and ensure LG red is used for hover and active states."
-        },
-        {
-          "path": "frontend/src/components/ServiceFeatures.tsx",
-          "operation": "modify",
-          "description": "Update card backgrounds and borders to use clean whites or light grays with subtle shadows, ensuring consistent border treatments and LG red accents for interactive elements."
-        },
-        {
-          "path": "frontend/src/components/ContactInfo.tsx",
-          "operation": "modify",
-          "description": "Refine contact info card backgrounds, borders, and shadows to align with LG brand identity using subtle grays and whites, ensuring professional and organized card layouts."
-        }
-      ]
-    },
-    {
-      "id": "REQ-16",
-      "summary": "Ensure all icons, badges, and graphical elements complement the LG brand aesthetic with appropriate sizing, spacing, and color treatments",
-      "acceptanceCriteria": [
-        "Appliance category icons are styled consistently with LG brand",
-        "Service feature icons use appropriate colors and sizing",
-        "Form icons and validation indicators follow LG brand patterns",
-        "All iconography maintains visual consistency across sections"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ApplianceCategoryGrid.tsx",
-          "operation": "modify",
-          "description": "Ensure appliance category icons (refrigerator, washing machine, AC, dishwasher, microwave, TV) are sized appropriately and use color treatments consistent with LG brand, maintaining visual consistency across all category cards."
-        },
-        {
-          "path": "frontend/src/components/ServiceFeatures.tsx",
-          "operation": "modify",
-          "description": "Update service feature icons to use appropriate LG brand colors (especially LG red accents), ensure consistent sizing across all feature cards, and maintain professional spacing around icons."
-        },
-        {
-          "path": "frontend/src/components/ServiceRequestForm.tsx",
-          "operation": "modify",
-          "description": "Ensure form icons and validation indicators use LG red for active/error states, maintain consistent icon sizing, and follow LG brand patterns for interactive elements."
-        },
-        {
-          "path": "frontend/src/components/ContactForm.tsx",
-          "operation": "modify",
-          "description": "Update form icons and validation indicators to use LG brand color treatments, ensure consistent sizing, and maintain visual consistency with other form components on the page."
-        },
-        {
-          "path": "frontend/src/components/Header.tsx",
-          "operation": "modify",
-          "description": "Ensure the wrench icon in the header maintains appropriate sizing and spacing relative to the new official LG logo, complementing the overall header design with LG brand aesthetics."
-        },
-        {
-          "path": "frontend/src/components/SuccessMessage.tsx",
-          "operation": "modify",
-          "description": "Update the success message component to use LG red for the check icon and adjust the color theme to align with LG brand identity while maintaining clear success messaging."
+          "description": "Replace the existing SVG logo implementation with an img element that references the generated LG logo asset at frontend/public/assets/generated/lg-logo.dim_180x60.png. Maintain the existing header layout structure, preserve the wrench icon and tagline positioning, and ensure proper alignment and spacing. The image should use appropriate alt text for accessibility and maintain the LG Heritage Red (#A50034) color scheme in the surrounding header design."
         }
       ]
     }

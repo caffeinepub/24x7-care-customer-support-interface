@@ -8,7 +8,7 @@ export function Header() {
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
               <img 
-                src="/assets/generated/lg-logo.dim_180x60.png" 
+                src="/assets/generated/lg-logo.dim_400x150.png" 
                 alt="LG Electronics" 
                 className="h-10 w-auto"
               />

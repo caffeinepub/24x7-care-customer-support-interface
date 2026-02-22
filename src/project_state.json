@@ -1,13 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
+  "projectStateVersion": 9,
   "summary": "LG-branded home appliances repair service center page",
   "architectural_notes": [],
-  "known_issues": [
-    "Current LG logo implementation does not match official LG branding"
-  ],
+  "known_issues": [],
   "isFixRequest": true,
-  "imageRequirements": "## Required Images\n- Official LG Electronics logo with red circle and white 'LG' text on transparent background, optimized for web header display (lg-logo.dim_180x60.png)",
+  "imageRequirements": "## Required Images\n- Official LG Electronics logo with circular red symbol and gray 'LG' text on transparent or white background (lg-logo.dim_400x150.png)",
   "existing_features": [
     {
       "id": "feature-create-a-new-service-center-landing-page-with-sections-for-different-home-appliance-categories-refrigerators-washing-machines-air-conditioners-microwaves-dishwashers-tvs",
@@ -126,6 +124,14 @@
       "title": "Ensure all icons, badges, and graphical elements throughout the page complement the LG brand aesthetic with appropriate sizing, spacing, and color treatments",
       "reqIds": [
         "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-header-component-logo-with-the-official-lg-electronics-logo-image-asset-showing-the-circular-red-lg-symbol-with-gray-lg-text-maintaining-the-existing-header-layout-and-structure",
+      "title": "Replace the Header component logo with the official LG Electronics logo image asset (showing the circular red LG symbol with gray 'LG' text), maintaining the existing header layout and structure",
+      "reqIds": [
+        "REQ-17"
       ],
       "version": 1
     }
